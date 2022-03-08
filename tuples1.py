@@ -87,16 +87,14 @@ print("The original tuple: " + str(my_tuple))
 print("The original list: " + str(my_list))
 print()
 
-print("Size of list: ")
-print(sys.getsizeof(my_list), "bytes")
-print("Size of tuple: ")
-print(sys.getsizeof(my_tuple), "bytes")
+print("Size of list: ", sys.getsizeof(my_list), "bytes")
+print("Size of tuple: ", sys.getsizeof(my_tuple), "bytes")
 print()
 
 # compare the execution time of a list vs. tuple creation statement
 import timeit
-print("Execution time of list: ") 
-print(timeit.timeit(stmt='[0, 1, 2, "hello", True]', number=1000000))
+print("Execution time of list: ", 
+timeit.timeit(stmt='[0, 1, 2, "hello", True]', number=1000000))
 
-print("Execution time of tuple: ")
-print(timeit.timeit(stmt='(0, 1, 2, "hello", True)', number=1000000))
+print("Execution time of tuple: ", 
+timeit.timeit(stmt='(0, 1, 2, "hello", True)', number=1000000))
