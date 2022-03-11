@@ -1,7 +1,6 @@
 print('\n----------------------Multi threading-----------------------------\n')
 # Multi threading
 
-from multiprocessing import Pool
 from threading import Thread, Lock, current_thread
 from queue import Queue
 import time
@@ -34,20 +33,3 @@ if __name__ == "__main__":
         thread.start()
      
     q.join()  # Blocks until all items in the queue have been gotten and processed.
-
-print('\n----------------------Multi processing pool-----------------------------\n')
-# Multi processing pool
-
-def square(num):
-    return num * num
-
-if __name__ == "__main__":
-    numbers = range(6)
-
-    pool = Pool()
-    result = pool.map(square, numbers)
-    pool.close()
-    pool.join()
-
-    print(result)
-

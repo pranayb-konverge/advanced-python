@@ -1,140 +1,140 @@
 print('\n----------------------Create sets-----------------------------\n')
 # Create Sets
 
-my_set = {"apple", "banana", "cherry"}
-print(my_set)
+my_set_fruits = {"apple", "banana", "cherry"}
+print(my_set_fruits)
 
 # or use the set function and create from an iterable, e.g. list, tuple, string
-my_set_2 = set(["one", "two", "three"])
-my_set_2 = set(("one", "two", "three"))
-# my_set_2 = set(("one", "two", "three"), (1,2,3)) # This is an error case
-print(my_set_2)
+my_set_numbers = set(["one", "two", "three"])
+my_set_numbers = set(("one", "two", "three"))
+# my_set_numbers = set(("one", "two", "three"), (1,2,3)) # This is an error case
+print(my_set_numbers)
 
-my_set_3 = set("aaabbbcccdddeeeeeffff")
-print(my_set_3)
+my_set_string = set("aaabbbcccdddeeeeeffff")
+print(my_set_string)
 
 # careful: an empty set cannot be created with {}, as this is interpreted as dict
 # use set() instead
-a = {}
-print("Type of a={}: ",type(a))
-a = set()
-print("Type of a=set(): ",type(a))
+my_dict = {}
+print("Type of a={}: ",type(my_dict))
+my_set = set()
+print("Type of a=set(): ",type(my_set))
 
 print('\n----------------------Add element in sets-----------------------------\n')
 # Add element in Sets
 
-new_set = set()
+my_set = set()
 
 # use the add() method to add elements
-new_set.add(55)
-new_set.add(54.56)
-new_set.add("55")
-new_set.add(True)
+my_set.add(55)
+my_set.add(54.56)
+my_set.add("55")
+my_set.add(True)
 
-print(new_set) # note: the order does not matter, and might differ when printed
+print(my_set) # note: the order does not matter, and might differ when printed
 
 # nothing happens when the element is already present:
-new_set.add(55)
-print(new_set)
+my_set.add(55)
+print(my_set)
 
 print('\n----------------------Remove element from sets-----------------------------\n')
 # Remove element from Sets
 
 # remove(x): removes x, raises a KeyError if element is not present
-my_set = {"apple", "banana", "cherry"}
-my_set.remove("apple")
-print(my_set)
+my_set_fruits = {"apple", "banana", "cherry"}
+my_set_fruits.remove("apple")
+print(my_set_fruits)
 
 # KeyError:
-# my_set.remove("orange")
+# my_set_fruits.remove("orange")
 
 # discard(x): removes x, does nothing if element is not present
-my_set.discard("cherry")
-my_set.discard("blueberry") # better to use discard
-print(my_set)
+my_set_fruits.discard("cherry")
+my_set_fruits.discard("blueberry") # better to use discard
+print(my_set_fruits)
 
 # clear() : remove all elements
-my_set.clear()
-print(my_set)
+my_set_fruits.clear()
+print(my_set_fruits)
 
 # pop() : return and remove a random element
-a = {True, 2, False, "hi", "hello"}
-print(a.pop()) # pop() takes no arguments
-print(a)
+my_set_random_elements = {True, 2, False, "hi", "hello"}
+print(my_set_random_elements.pop()) # pop() takes no arguments
+print(my_set_random_elements)
 
 print('\n----------------------Union and Intersection in sets-----------------------------\n')
 # Union and Intersection in sets
 
-odds = {1, 3, 5, 7, 9}
-evens = {0, 2, 4, 6, 8}
-primes = {2, 3, 5, 7}
+odds_set = {1, 3, 5, 7, 9}
+evens_set = {0, 2, 4, 6, 8}
+primes_set = {2, 3, 5, 7}
 
 # union() : combine elements from both sets, no duplication
 # note that this does not change the two sets
-u = odds.union(evens)
-print(u)
+union_set = odds_set.union(evens_set)
+print(union_set)
 
 # intersection(): take elements that are in both sets
-i = odds.intersection(evens)
-print(i)
+intersection_set = odds_set.intersection(evens_set)
+print(intersection_set)
 
-i = odds.intersection(primes)
-print(i)
+intersection_set = odds_set.intersection(primes_set)
+print(intersection_set)
 
-i = evens.intersection(primes)
-print(i)
+intersection_set = evens_set.intersection(primes_set)
+print(intersection_set)
 
 print('\n----------------------Difference of sets-----------------------------\n')
 # Difference of sets
 
-setA = {1, 2, 3, 4, 5, 6, 7, 8, 9}
-setB = {1, 2, 3, 10, 11, 12}
+num_set_long = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+num_set_short = {1, 2, 3, 10, 11, 12}
 
-# difference() : returns a set with all the elements from the setA that are not in setB.
-diff_set = setA.difference(setB)
+# difference() : returns a set with all the elements from the num_set_long that are not in num_set_short.
+diff_set = num_set_long.difference(num_set_short)
 print(diff_set)
 
 # A.difference(B) is not the same as B.difference(A)
-diff_set = setB.difference(setA)
+diff_set = num_set_short.difference(num_set_long)
 print(diff_set)
 
-# symmetric_difference() : returns a set with all the elements that are in setA and setB but not in both
-diff_set = setA.symmetric_difference(setB)
+# symmetric_difference() : returns a set with all the elements that are in num_set_long and num_set_short but not in both
+diff_set = num_set_long.symmetric_difference(num_set_short)
 print(diff_set)
 
 # A.symmetric_difference(B) = B.symmetric_difference(A)
-diff_set = setB.symmetric_difference(setA)
+diff_set = num_set_short.symmetric_difference(num_set_long)
 print(diff_set)
 
 print('\n----------------------Updating sets-----------------------------\n')
 # Updating sets
 
-setA = {1, 2, 3, 4, 5, 6, 7, 8, 9}
-setB = {1, 2, 3, 10, 11, 12}
+num_set_long = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+num_set_short = {1, 2, 3, 10, 11, 12}
 
 # update() : Update the set by adding elements from another set.
-setA.update(setB)
-print(setA)
+num_set_long.update(num_set_short)
+print(num_set_long)
 
 # intersection_update() : Update the set by keeping only the elements found in both
-setA = {1, 2, 3, 4, 5, 6, 7, 8, 9}
-setA.intersection_update(setB)
-print(setA)
+num_set_long = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+num_set_long.intersection_update(num_set_short)
+print(num_set_long)
 
 # difference_update() : Update the set by removing elements found in another set.
-setA = {1, 2, 3, 4, 5, 6, 7, 8, 9}
-setA.difference_update(setB)
-print(setA)
+num_set_long = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+num_set_long.difference_update(num_set_short)
+print(num_set_long)
 
 # symmetric_difference_update() : Update the set by only keeping the elements found in either set, but not in both
-setA = {1, 2, 3, 4, 5, 6, 7, 8, 9}
-setA.symmetric_difference_update(setB)
-print(setA)
+num_set_long = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+num_set_long.symmetric_difference_update(num_set_short)
+print(num_set_long)
 
 # Note: all update methods also work with other iterables as argument, e.g lists, tuples
-setA = {1, 2, 3, 10, 11, 12}
-setA.update([1, 2, 3, 4, 5, 6])
-print(setA)
+num_set_long = {1, 2, 3, 10, 11, 12}
+num_set_long.update([1, 2, 3, 4, 5, 6])
+print(num_set_long)
 
 print('\n----------------------Copying sets-----------------------------\n')
 # Copying sets
@@ -161,21 +161,21 @@ print(set_org)
 
 print('\n----------------------Subset, Superset, and Disjoint sets-----------------------------\n')
 # Subset, Superset, and Disjoint sets
-setA = {1, 2, 3, 4, 5, 6}
-setB = {1, 2, 3}
+num_set_long = {1, 2, 3, 4, 5, 6}
+num_set_short = {1, 2, 3}
 # issubset(setX): Returns True if setX contains the set
-print(setA.issubset(setB))
-print(setB.issubset(setA)) # True
+print(num_set_long.issubset(num_set_short))
+print(num_set_short.issubset(num_set_long)) # True
 
 # issuperset(setX): Returns True if the set contains setX
-print(setA.issuperset(setB)) # True
-print(setB.issuperset(setA))
+print(num_set_long.issuperset(num_set_short)) # True
+print(num_set_short.issuperset(num_set_long))
 
 # isdisjoint(setX) : Return True if both sets have a null intersection, i.e. no same elements
 setC = {7, 8, 9}
-print(setA.isdisjoint(setB))
-print(setA.isdisjoint(setC))
-print(setB.isdisjoint(setC))
+print(num_set_long.isdisjoint(num_set_short))
+print(num_set_long.isdisjoint(setC))
+print(num_set_short.isdisjoint(setC))
 
 print('\n----------------------Frozen sets-----------------------------\n')
 # Frozen sets, MOSTLY USED FOR COMPARISION!

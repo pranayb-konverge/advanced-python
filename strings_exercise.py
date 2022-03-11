@@ -32,38 +32,39 @@ print(new_message)
 
 # split the string into a list
 my_string = "how are you doing"
-a = my_string.split() # default argument is " "
-print(a)
+string_list = my_string.split() # default argument is " "
+print(string_list)
+
 my_string = "one,two,three"
-a = my_string.split(",")
-print(a)
+string_list = my_string.split(",")
+print(string_list)
 
 # join elements of a list into a string
 my_list = ['How', 'are', 'you', 'doing']
-a = ' '.join(my_list) # the given string is the separator, e.g. ' ' between each argument
-print(a)
+my_string = ' '.join(my_list) # the given string is the separator, e.g. ' ' between each argument
+print(my_string)
 
 print('\n----------------------Useful formating in string-----------------------------\n')
 # Useful formating in string
 
 # use braces as placeholders
-a = "Hello {0} and {1}".format("Peter", "Tom")
-print(a)
+my_string = "Hello {0} and {1}".format("Peter", "Tom")
+print(my_string)
 
 # the positions are optional for the default order
-a = "Hello {} and {}".format("Peter", "Tom")
-print(a)
+my_string = "Hello {} and {}".format("Peter", "Tom")
+print(my_string)
 
-a = "The integer value is {}".format(2)
-print(a)
+my_string = "The integer value is {}".format(2)
+print(my_string)
 
 # some special format rules for numbers
-a = "The float value is {0:.3f}".format(2.1234)
-print(a)
-a = "The float value is {0:e}".format(2.1234)
-print(a)
-a = "The binary value is {0:b}".format(2)
-print(a)
+my_string = "The float value is {0:.3f}".format(2.1234)
+print(my_string)
+my_string = "The float value is {0:e}".format(2.1234)
+print(my_string)
+my_string = "The binary value is {0:b}".format(2)
+print(my_string)
 
 # old style formatting by using % operator
 print("Hello %s and %s" % ("Peter", "Tom")) # must be a tuple for multiple arguments
@@ -76,14 +77,14 @@ print("The float value is %.2f" % val)
 
 name = "Peter"
 age = 25
-a = f"Hello, {name}. You are {age}."
-print(a)
+my_string = f"Hello, {name}. You are {age}."
+print(my_string)
 pi = 3.14159
-a = f"Pi is {pi:.3f}"
-print(a)
+my_string = f"Pi is {pi:.3f}"
+print(my_string)
 # f-Strings are evaluated at runtime, which allows expressions
-a = f"The value is {2*60}"
-print(a)
+my_string = f"The value is {2*60}"
+print(my_string)
 
 print('\n----------------------immutability and concatenation in string-----------------------------\n')
 # immutability and concatenation in string
@@ -92,15 +93,14 @@ my_list = ["a"] * 1000000
 
 # bad
 start = timer()
-a = ""
+my_string = ""
 for i in my_list:
-    a += i
+    my_string += i
 end = timer()
-print(a)
 print(f"concatenate string with + : {(end - start):.5f}")
 
 # good
 start = timer()
-a = "".join(my_list)
+my_string = "".join(my_list)
 end = timer()
 print(f"concatenate string with join(): {end-start:.5f}")

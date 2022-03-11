@@ -41,22 +41,22 @@ print(string_to_tuple)
 print('----------------------Slicing-----------------------------')
 #Slicing
 
-a = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-print(a[:]) # a[start:stop:step], default step is 1
+my_tuple = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+print(my_tuple[:]) # a[start:stop:step], default step is 1
 
-b = a[1:3] # Note that the last index is not included
+b = my_tuple[1:3] # Note that the last index is not included
 print(b)
 
-b = a[2:] # until the end
+b = my_tuple[2:] # until the end
 print(b)
 
-b = a[:3] # from beginning
+b = my_tuple[:3] # from beginning
 print(b)
 
-b = a[::2] # start to end with every second item
+b = my_tuple[::2] # start to end with every second item
 print(b)
 
-b = a[::-1] # reverse tuple
+b = my_tuple[::-1] # reverse tuple
 print(b)
 
 print('----------------------Unpack tuple-----------------------------')
