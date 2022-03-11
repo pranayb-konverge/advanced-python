@@ -11,4 +11,3 @@ print(sys.getsizeof(list_even_num), "bytes")
 print()
 print(sum(gen_even_num), "Sum")
 print(sys.getsizeof(gen_even_num), "bytes") # less memory space
-
