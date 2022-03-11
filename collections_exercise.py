@@ -2,8 +2,8 @@ print('\n----------------------Counter in collections---------------------------
 # Counter in collections
 
 from collections import Counter, namedtuple, defaultdict, deque
-a = "aaaaabbbbcccdde"
-my_counter = Counter(a)
+my_string = "aaaaabbbbcccdde"
+my_counter = Counter(my_string)
 print(my_counter)
 
 print(my_counter.items())
@@ -56,61 +56,72 @@ print('\n----------------------defaultdict in collections-----------------------
 # defaultdict in collections
 
 # initialize with a default integer value, i.e 0
-d = defaultdict(int)
-d['yellow'] = 1
-d['blue'] = 2
-print(d.items())
-print(d['green'])
+my_defualt_int_dictionary = defaultdict(int)
+my_defualt_int_dictionary['yellow'] = 1
+my_defualt_int_dictionary['blue'] = 2
+print(my_defualt_int_dictionary.items())
+print(my_defualt_int_dictionary['green'])
 
 # initialize with a default list value, i.e an empty list
-d = defaultdict(list)
+my_defualt_list_dictionary = defaultdict(list)
 s = [('yellow', 1), ('blue', 2), ('yellow', 3), ('blue', 4), ('red', 5)]
 for k, v in s:
-    d[k].append(v)
+    my_defualt_list_dictionary[k].append(v)
 
-print(d.items())
-print(d['green'])
+print(my_defualt_list_dictionary.items())
+print(my_defualt_list_dictionary['green'])
 
 print('\n----------------------deque in collections-----------------------------\n')
 # deque in collections
 
-d = deque()
+"""
+
+A deque is a double-ended queue. It can be used to add or remove elements from both ends. 
+Deques support thread safe, memory efficient appends and pops from either side of the deque 
+with approximately the same O(1) performance in either direction. The more commonly used s
+tacks and queues are degenerate forms of deques, where the inputs and outputs are 
+restricted to a single end.
+
+"""
+
+my_deque = deque()
 
 # append() : add elements to the right end 
-d.append('a')
-d.append('b')
-print(d)
+my_deque.append('a')
+my_deque.append('b')
+print(my_deque)
 
 # appendleft() : add elements to the left end 
-d.appendleft('c')
-print(d)
+my_deque.appendleft('c')
+print(my_deque)
 
 # pop() : return and remove elements from the right
-print(d.pop())
-print(d)
+print(my_deque.pop())
+print(my_deque)
 
 # popleft() : return and remove elements from the left
-print(d.popleft())
-print(d)
+print(my_deque.popleft())
+print(my_deque)
 
 # clear() : remove all elements
-d.clear()
-print(d)
+my_deque.clear()
+print(my_deque)
 
-d = deque(['a', 'b', 'c', 'd'])
+my_deque = deque(['a', 'b', 'c', 'd'])
 
 # extend at right or left side
-d.extend(['e', 'f', 'g'])
-d.extendleft(['h', 'i', 'j']) # note that 'j' is now at the left most position
-print(d)
+my_deque.extend(['e', 'f', 'g'])
+my_deque.extend(['e', 'f', 'g'])
+my_deque.extendleft(['h', 'i', 'j']) # note that 'j' is now at the left most position
+print(my_deque)
 
 # count(x) : returns the number of found elements
-print(d.count('h'))
+print(my_deque.count('h'))
 
 # rotate 1 positions to the right
-d.rotate(1)
-print(d)
+my_deque.rotate(1)
+print(my_deque)
 
 # rotate 2 positions to the left
-d.rotate(-2)
-print(d)
+my_deque.rotate(-2)
+print(my_deque)
